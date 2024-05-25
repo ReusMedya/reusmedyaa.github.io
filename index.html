@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reus Media</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #hero {
+            position: relative;
+        }
+
+        #hero video {
+            height: 100vh;
+            width: 100%;
+            background-position: absolute;
+            z-index: 10;
+            object-fit: cover;
+        }
+
+        #hero .content {
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            height: 100%;
+            width: 100%;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero .content h1 {
+            color: #FFF;
+            font-family: Arial, sans-serif;
+        }
+
+        #hero .content a {
+            font-size: 18px;
+            color: #FFF;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <video id="video" autoplay loop muted>
+            <source src="https://videos.pexels.com/video-files/1851190/1851190-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <div>
+                <h1>Reus Media</h1>
+                <a href="https://www.instagram.com/___baris__.reus__/?utm_source=ig_web_button_share_sheet" class="btn">İletişim İçin Tıklayın</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var video = document.getElementById('video');
+        var isPlaying = false;
+
+        video.addEventListener('click', function() {
+            if (isPlaying) {
+                video.pause();
+            } else {
+                video.play();
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>
+
+
